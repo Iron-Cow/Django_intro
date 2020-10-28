@@ -10,3 +10,7 @@ def index(request):
     #     <input/ type='text'>
     #
     # """)
+
+
+def htmltrain(request):
+    return render(request, 'home/html-train.html')
