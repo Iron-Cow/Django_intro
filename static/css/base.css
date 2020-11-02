@@ -1,3 +1,4 @@
+
 nav{
     background: black;
     color: greenyellow;
@@ -12,14 +13,18 @@ img{
     opacity: 50%;
 }
 body{
-    background: repeating-linear-gradient( 45deg, #ffffff20 100px, #22222205 200px, #22558810 200px, #22558810 300px );
+
+    background: repeating-linear-gradient( 45deg, #ffff0020 10px, #22222205 20px, #22558810 20px, #22558810 30px );
+    /*background: url('../img/latest-post-5-img.png')*/
+    /*как добраться до других статических файлов из css*/
+
 }
 .container{
     background: #11331110;
     /*background-color: rgba(11, 33, 11, 10%);*/
     color: black;
     min-height: 300px;
-    font-family: Arial sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
     border-radius: 10px;

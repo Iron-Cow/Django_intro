@@ -1,0 +1,17 @@
+.card{
+    display: inline-block;
+    width: 25%;
+    height: 100px;
+    background-color: green;
+    color: white;
+    border: magenta solid 1px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray ;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.red_card{
+    background-color: red;
+}

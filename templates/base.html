@@ -7,7 +7,12 @@
         {% block title %}
         {% endblock title %}
     </title>
+    <link rel="icon" href="{% static 'img/icon.png' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        {% block link %}
+        {% endblock link %}
+<!--https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto:ital,wght@0,400;0,700;1,400-->
 </head>
 <body>
 <nav>
@@ -15,6 +20,12 @@
     <div>
         {% block img_logo %}
         {% endblock img_logo %}
+    </div>
+    <div>
+    <a href="{% url 'homepage' %}">Home page</a>
+    <a href="{% url 'htmltrain' %}">HTML page</a>
+    <a href="{% url 'multipage' 666 %}">Multi page</a>
+
     </div>
 </nav>
 <div class="container">
