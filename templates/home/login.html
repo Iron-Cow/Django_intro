@@ -11,6 +11,8 @@
 
 {% block content %}
 <form class="form-group" action="/login" method="post">
+    {% csrf_token %}
+    {{ report }}
     <p>
         <label for="login_field">Login</label>
         <input id="login_field" name="login_field" type="text" placeholder="Введите логин">
@@ -20,11 +22,7 @@
         <input id="password_field" name="password_field" type="password" placeholder="Введите пароль">
     </p>
 
-    <button>
-        Login
-    </button>
-    <button>
-        Cancel
-    </button>
+    <input id="submit" type="submit" value="Send" class="button">
+    <input type="reset" value="Clear" class="button">
 </form>
 {% endblock content %}

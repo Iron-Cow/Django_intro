@@ -15,19 +15,10 @@
 <!--https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto:ital,wght@0,400;0,700;1,400-->
 </head>
 <body>
-<nav>
-    University Harvard
-    <div>
-        {% block img_logo %}
-        {% endblock img_logo %}
-    </div>
-    <div>
-    <a href="{% url 'homepage' %}">Home page</a>
-    <a href="{% url 'htmltrain' %}">HTML page</a>
-    <a href="{% url 'multipage' 666 %}">Multi page</a>
 
-    </div>
-</nav>
+
+{% include 'nav.html' %}
+
 <div class="container">
 
 {% block content %}

@@ -8,7 +8,7 @@
     padding: 15px 5px;
 }
 
-.form-group button{
+.form-group .button{
     background-color: dimgray;
     color: orange;
     border-radius: 2px;

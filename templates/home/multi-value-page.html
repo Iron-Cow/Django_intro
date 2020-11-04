@@ -25,7 +25,7 @@
     red_card
 {% endif %}"
 >
-{% if animals|length > 3 %}
+{% if animal|length > 3 %}
     Стадо!
 {% endif %}
 
@@ -37,7 +37,8 @@
 <br>
 {% for num in range %}
 
-<a href='/multi_page/{{ num }}'>link {{ num }}</a>
+<!--<a href='/multi_page/{{ num }}'>link {{ num }}</a>-->
+<a href='{% url "multipage" num %}'>link {{ num }}</a>
 {% endfor %}
 
 
