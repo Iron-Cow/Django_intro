@@ -11,14 +11,14 @@
 
 {% block content %}
 
-<form class="form-group" action="/register" method="post">
+<form class="form-group" action="/register" method="post" onsubmit="return false">
     {% csrf_token %}
     <div class="error">
         {{ report }}
     </div>
     <p>
         <label for="login_field">Login</label>
-        <input id="login_field" name="login_field" type="text" placeholder="Введите логин">
+        <input id="login_field" name="login_field" type="text" placeholder="Введите логин" >
         <img id="login_ico" src="{% static 'img/question.png' %}" alt="img_result">
         <div id="login_err" class="err"></div>
     </p>

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -53,7 +54,6 @@ def logout_user(request):
     logout(request)
     return redirect("/")
 
-
 def register(request):
     if request.method == "GET":
         if request.user.is_authenticated:
@@ -85,4 +85,20 @@ def register(request):
         report = 'Что-то страшное произошло!'
         data['report'] = report
         return render(request, 'home/register.html', context=data)
+
+
+def ajax_reg(request) -> JsonResponse:
+    response = dict()
+    _login = request.GET.get('login_field')
+
+    try:
+        User.objects.get(username=_login)
+        response['message_login'] = "занят"
+    except User.DoesNotExist:
+        response['message_login'] = "свободен"
+
+    print(_login)
+    print(response)
+
+    return JsonResponse(response)
 
