@@ -10,6 +10,21 @@ nav{
     border-radius: 10px;
 }
 
+
+.big_link{
+    display: inline-block;
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    padding-top: 55px;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20%;
+    height: 100px;
+}
+
 nav .links a{
     display: inline-block;
     background-color: lightgreen;
@@ -53,3 +68,4 @@ footer{
     justify-content: center;
     border-radius: 10px;
 }
+
