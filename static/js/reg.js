@@ -13,9 +13,9 @@ function example() {
     // number = 2;  ERROR
 
     // варианты создания переменных
-        // let
-        // var
-        // conts
+    // let
+    // var
+    // conts
 
     alert('Hello ' + name);
     let pseudo = prompt('Input pseudonim');
@@ -42,6 +42,7 @@ $(document).ready(function () {
     let valid_email = false;
 
     let loginExp = /^[a-zA-Z0-9][a-zA-Z0-9_]{4,14}$/
+    let passExp = /^[a-zA-Z0-9]{5,10}$/
     let regExp_email = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
     // console.log(loginExp.test('aaa3a'));
     // console.log(loginExp.test('bas%3sadf'));
@@ -102,6 +103,33 @@ $(document).ready(function () {
         $('#email_ico').attr('src', '../../static/img/question.png')
         $('#email_err').text('')
     })
+
+
+
+    $('#papassword_confirm_field').focus(function () {  // сброс ошибок и иконок
+        $('#papassword_confirm_ico').attr('src', '../../static/img/question.png')
+        $('#papassword_confirm_err').text('')
+    })
+
+$('#password_confirm_field').blur(function () {
+    let _pass2 = $(this).val()
+    if (passExp.test(_pass2)){
+         if ($("#password_field").val() === $("#password_confirm_field").val()){// не валидный
+              $('#password_confirm_ico').attr('src', '../../static/img/win.png')
+              $('#password_confirm_err').text('')
+              valid_password2 = true;
+         }else{
+               $('#password_confirm_ico').attr('src', '../../static/img/error.png')
+               $('#papassword_confirm_err').text('Пароли должны быть одинаковы!!!')
+               valid_password2 = false;
+
+    }}else{// не валидный
+        $('#password_confirm_ico').attr('src', '../../static/img/error.png')
+        $('#papassword_confirm_err').text('Пароль должен содержать буквы и цыфры, количество символов 8-16!!!')
+        valid_password2 = false;
+    }
+})
+
 
     $('#submit').click(function () {
         if (

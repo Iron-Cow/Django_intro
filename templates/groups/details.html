@@ -11,4 +11,48 @@
 
 {% block content %}
 
+<h1>{{ group.name }}</h1>
+
+<table border="1">
+    <tr style="background-color: lavender">
+        <th width="20%">Поле</th>
+        <th width="80%">Данные</th>
+    </tr>
+    <tr>
+        <td>Группа</td>
+        <td>{{ group.name }}</td>
+    </tr>
+    <tr>
+        <td>О Группе</td>
+        <td>{{ group.about }}</td>
+    </tr>
+    <tr>
+        <td>Максимальное число студентов</td>
+        <td>{{ group.max_student }}</td>
+    </tr>
+    <tr>
+        <td>Вечерняя группа</td>
+        <td>
+            {% if group.is_evening_group %}
+                <img src="{% static 'img/win.png' %}" alt="img">
+            {% else %}
+                <img src="{% static 'img/error.png' %}" alt="img">
+            {% endif %}
+        </td>
+    </tr>
+
+</table>
+
+<h2>Список студентов</h2>
+
+<table border="1">
+    {%for student in students %}
+    <tr>
+        <td> {{ student.name}} </td>
+        <td> {{ student.age}} </td>
+    </tr>
+
+    {%endfor %}
+</table>
+
 {% endblock content %}

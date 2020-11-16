@@ -12,18 +12,51 @@ nav{
 
 
 .big_link{
+    position: relative;
     display: inline-block;
     background-color: green;
-    text-decoration: none;
-    color: white;
+
     padding: 3px;
     padding-top: 55px;
     border-radius: 4px;
     margin-top: 5px;
-    cursor: pointer;
+
     width: 20%;
     height: 100px;
+    color: white;
+    text-decoration: none;
 }
+.big_link a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+
+}
+
+.delete_group{
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+}
+
+.update_group{
+    display: inline-block;
+    position: absolute;
+    background-color: darkgoldenrod;
+    color: white;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    height: 25px;
+    padding: 2px 3px;
+}
+
 
 nav .links a{
     display: inline-block;

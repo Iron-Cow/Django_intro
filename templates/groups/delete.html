@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-
+Удаление
 {% endblock title %}
 
 {% block img_logo %}
@@ -10,5 +10,13 @@
 {% endblock img_logo %}
 
 {% block content %}
+
+<form action="/groups/{{ group.id }}/delete" method="post">
+    {% csrf_token %}
+    <h1>Вы точно хотите удалить группу {{ group.name }}?</h1>
+    <a href="{% url 'group_list' %}">Назад</a>
+    <input id="submit" type="submit" value="Delete" class="button">
+    
+</form>
 
 {% endblock content %}
